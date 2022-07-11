@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Depot</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <%= stylesheet_link_tag 'application', media: 'all',
+    'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript">
+      I18n.defaultLocale = "<%= I18n.default_locale %>";
+      I18n.locale        = "<%= I18n.locale %>";
+    </script>
+    <%= javascript_pack_tag 'locale_switcher', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+    <section class="content">
+      <%= render 'layouts/sidebar' %>
+      <div class="container">
+
+        <main class='<%= controller.controller_name %>'>
+          <%= yield %>
+        </main>
+      </div>
+    </section>
+  </body>
+</html>

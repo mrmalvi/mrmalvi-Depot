@@ -1,0 +1,6 @@
+one:
+  product: two
+  cart: one
+two:
+  product: ruby
+  order: one

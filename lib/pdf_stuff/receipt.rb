@@ -1,0 +1,2 @@
+class PdfStuff::Receipt
+end
